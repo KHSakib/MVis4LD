@@ -1,0 +1,271 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* height: 80%; */
+}
+
+.data-display {
+    max-height: 400px; /* Set a maximum height */
+    overflow: scroll; /* Enable scrolling if the table is taller than the max-height */
+    width: 100%;
+}
+
+.data-display table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.data-display th, .data-display td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.data-display th {
+    background-color: #f2f2f2;
+}
+
+
+h1 {
+    color: #ffffff;
+    background-color: #007bff;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.file-input {
+    background-color: #007bff;
+    width: 100%;
+    margin-bottom: 20px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input[type="file"],
+input[type="text"],
+button {
+    margin: 5px;
+}
+
+canvas {
+    border: 1px solid #ccc;
+}
+
+.file-input #start {
+    /* flex: 20%; 20% width */
+    padding: 5px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    text-align: center; /* Align the text in the center if needed */
+}
+
+.container {
+    display: flex;
+}
+.sidebar {
+    background-color: #f4f4f4;
+    padding: 20px;
+    width: 250px;
+    height: 100vh;
+}
+
+.dropdown {
+    margin-bottom: 20px;
+}
+
+.dropdown label,
+.slider-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.dropdown select,
+.slider-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#submit {
+    background-color: #007BFF; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 16px; 
+  }
+
+  #submit:hover {
+    background-color: #0056b3; 
+  }
+
+  /* Styles for the button */
+.cool-button {
+    display: flex;
+    background-color: #777;
+    color: rgb(240, 240, 240);
+    padding: 1px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .cool-button:hover {
+    background-color: #0056b3;
+  }
+  
+
+    /* Styles for the button */
+.cool-button2 {
+    display: flex;
+    background-color: #777;
+    color: rgb(240, 240, 240);
+    padding: 0.5px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .cool-button2:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Styles for the icon */
+  .icon {
+    margin-right: 10px; /* Add some space between the icon and text */
+    font-size: 20px; /* Adjust the icon size */
+  }
+  
+/* button {
+    padding: 10px;
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+} */
+
+.center{
+    /* background-color: red; */
+    width: 100%;
+}
+.tabble-section{
+    /* background-color: rebeccapurple; */
+    display: flex;
+}
+.data-table{
+    width: 50%;
+    height: 10vh;
+}
+.result-table{
+    width: 50%;
+
+}
+
+.graph-section{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 150px;
+    padding: 100px;
+}
+.graphs{
+    width: 80%;
+}
+#myChart{
+    border: none;
+    
+}
+
+/* test */
+.dropdown-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1;
+    min-width: 150px; /* Adjust as needed */
+}
+
+/* Style for the model checkboxes */
+.model-checkbox {
+    margin-bottom: 5px;
+}
+
+/* Show the dropdown list when the dropdown is hovered */
+.dropdown:hover .dropdown-list {
+    display: block;
+}
+
+/* Style for the label */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.voice-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.voice-display{
+    width: 40rem;
+    height: 2rem;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+#instructions{
+    text-align: center;
+
+}
+
+.search_block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#plotInput {
+    padding: 10px;
+    font-size: 16px;
+    width: 50rem;
+    margin: 20px;
+    border-radius: 5px;
+}

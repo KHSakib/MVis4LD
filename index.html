@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Multimodal Visualization System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>MVis4LD : Interactive Multimodal Visualization System</h1>
+        <div class="file-input">
+            <input type="file" id="csvFileInput" accept=".csv" onchange="handleFiles()"> 
+            
+            <div class="search_block">
+                <input type="text" id="plotInput" placeholder="Enter plot type followed by column names, separated by commas">
+                <button id="generate_plot" class="cool-button">
+                    <span class="icon">&#x1F4CA;</span> <!-- Add a cool icon here, I used a 📊 emoji -->
+                    Generate Plot
+                  </button>
+            </div>
+
+            <div class="voice-section">
+                <button id="start" class="cool-button2">
+                    <span class="icon">&#127908;</span> <!-- Add a cool audio icon here (🔊) -->
+                    Start Listening
+                  </button>
+                <!-- <button id="start">Start Listening</button> -->
+                <div class="voice-display">
+                    <p id="instructions">Press the button and give a command that which plot you want to see.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="container">
+        <div class="sidebar">
+            <div class="dropdown">
+                <label for="model">Select Model:</label>
+                <div class="model">
+                    <input type="checkbox" id="RF" name="RF" value="RF">
+                    <span for="accuracy"> RF</span><br>
+            
+                    <input type="checkbox" id="SVM" name="precision" value="SVM">
+                    <span for="SVM">SVM</span><br>
+            
+                    <input type="checkbox" id="LR" name="LR" value="LR">
+                    <span for="LR">LR</span><br>
+
+                    <input type="checkbox" id="GaussianNB" name="GaussianNB" value="GaussianNB">
+                    <span for="GaussianNB">GaussianNB</span><br>
+
+                    <input type="checkbox" id="Kneighbors" name="Kneighbors" value="Kneighbors">
+                    <span for="Kneighbors">Kneighbors</span><br>
+            
+                </div>
+            </div>
+            <div class="dropdown">
+                <label for="dataset">Select a Plot:</label>
+                <select id="dataset">
+                    <option value="bar">Bar Plot</option>
+                    <option value="line">Line Plot</option>
+                    <option value="scatter">Scatter Plot</option>
+
+                    <!-- Add more dataset options here -->
+                </select>
+            </div>
+            
+            <div class="dropdown">
+                <label for="feature-section">Select Feature:</label>
+                <div class="feature-section">
+                    <input type="checkbox" id="accuracy" name="accuracy" value="accuracy">
+                    <span for="accuracy"> Accuracy</span><br>
+            
+                    <input type="checkbox" id="precision" name="precision" value="precision">
+                    <span for="precision">Precision</span><br>
+            
+                    <input type="checkbox" id="recall" name="recall" value="recall">
+                    <span for="recall">Recall</span><br>
+            
+                    <input type="checkbox" id="auc" name="auc" value="auc">
+                    <span for="auc">Auc</span><br>
+            
+                    <input type="checkbox" id="score" name="score" value="score">
+                    <span for="score">Score</span><br>
+                </div>
+            </div>
+            
+            <button id="submit">Submit</button>
+        </div>
+        
+        <div class="center">
+            <div class="tabble-section">
+                <div class="data-table">
+                    <div id="dataDisplay" class="data-display">
+                    </div>
+                </div>
+                <div class="result-table">
+                    <div id="specificDataDisplay" class="data-display">
+                    </div>
+                </div>
+            </div>
+            <div class="graph-section">
+                <div class="graphs">
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
