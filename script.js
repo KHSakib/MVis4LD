@@ -109,8 +109,8 @@ document.getElementById('generate_plot').addEventListener('click',()=>{
 })
 
 function plotData(inputData, visualData) {
-    const plotTypes = ['bar','line','scatter', 'pie'];
-    const searchData = ['bar','line','scatter', 'pie', 'accuracy', 'precision', 'recall', 'auc', 'score']
+    const plotTypes = ['bar','line','scatter', 'pie', 'doughnut'];
+    const searchData = ['bar','line','scatter', 'pie', 'doughnut', 'accuracy', 'precision', 'recall', 'auc', 'score']
     let inputs = inputData?.split(' ');
 
     // Filter unique values from arrayB that exist in arrayA
