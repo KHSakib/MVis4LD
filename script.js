@@ -106,11 +106,29 @@ function displayCommand(command) {
     instructionsElement.textContent = `You said: "${command}"`;
 }
 
-document.getElementById('generate_plot').addEventListener('click',()=>{
-    const plotInput = document.getElementById('plotInput').value;
-    plotData(plotInput,convertStringToObjectArray(currentRawData));    
+// document.getElementById('generate_plot').addEventListener('click',()=>{
+//     const plotInput = document.getElementById('plotInput').value;
+//     plotData(plotInput,convertStringToObjectArray(currentRawData));    
 
-})
+// })
+
+document.getElementById('generate_plot').addEventListener('click', () => {
+    const plotInput = document.getElementById('plotInput').value;
+    
+
+    try {
+        const plotResult = plotData(plotInput, convertStringToObjectArray(currentRawData));
+
+        // Check if plotResult indicates failure (depending on how plotData is implemented)
+        if (!plotResult) {
+            //alert('Unable to generate plot. Please check your input.');
+        }
+    } catch (error) {
+        // Catch and handle any errors that occur during plotting
+        console.error('Error occurred while generating plot:', error);
+        alert('Please Select atleast one Model first.');
+    }
+});
 
 function plotData(inputData, visualData) {
     const plotTypes = ['bar','line','scatter', 'pie', 'doughnut'];

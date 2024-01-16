@@ -22,7 +22,30 @@
                         <span class="dataset-name">Deception Dataset</span>
                         <span class="goal">Lie Detection</span>
                         <span class="size">122 Indivisual Interview</span>
-                        <button><a href="index-2.html">Select</a></button>
+                        <!-- <button><a href="index-2.html">Select</a></button> -->
+
+                        <input type="file" id="csvFileInput" accept=".csv" onchange="handleFiles()"> 
+                        <button id="nextPageButton">Next</button>
+
+                        <script>
+                            document.getElementById('nextPageButton').addEventListener('click', function() {
+                                var fileInput = document.getElementById('csvFileInput');
+                                var file = fileInput.files[0];
+                                var reader = new FileReader();
+                                reader.onload = function(e) {
+                                    // Store the file content in localStorage
+                                    localStorage.setItem('uploadedDataset', e.target.result);
+                                    // Navigate to the next page
+                                    window.location.href = 'index-2.html';
+                                };
+                                if (file) {
+                                    reader.readAsText(file);
+                                } else {
+                                    // Handle case where no file was selected
+                                    alert('Please upload a file before proceeding.');
+                                }
+                            });
+                        </script>
                         
 
                         <!-- <button>Select</button> -->
