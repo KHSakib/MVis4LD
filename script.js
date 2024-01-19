@@ -190,7 +190,7 @@ function plotData(inputData, visualData) {
         window.myChart = new Chart(ctx, {
             type: plotType,
             data: {
-                labels: visualData?.map(row => row[columns[0]]),
+                labels: plotType=== 'scatter' ?visualData?.map(row => row[columns[0]]): selectedModel,
                 datasets: datasets
             },
             options: {
