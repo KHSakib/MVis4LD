@@ -16,16 +16,16 @@ function handleFiles() {
     });
 }
 
-    const csvData = `Model,Accuracy,Precision,Recall,Auc,Score
-                    BERT,99.01,99.53,98.05,91.14,88.14
-                    LSTM,99.64,99.53,98.05,91.14,88.14
-                    BiLSTM,99.15,99.53,98.05,91.14,88.14
+    const csvData = `Model,Accuracy,Precision,Recall,Auc
+                    BERT,84.00,100.00,69.23,84.6
+                    LSTM,76.00,75.00,85.71,74.7
+                    BiLSTM,64.00,69.23,64.23,64.00
                      
-                    RF,98.64,99.53,98.05,91.14,88.14
-                     SVM,89.99,95.49,87.5,89.74,88.74
-                     GaussianNB,84.05,83.55,87.26,83.11,82.45
-                     LR,89.11,93.1,88.03,91.79,89.34
-                     Kneighbors,86.84,90.59,86.21,84.7,85.1`;
+                    RF,76.00,80.00,66.67,74.7
+                     SVM,76.00,75.00,75.00,76.00
+                     GaussianNB,72.00,70.6,85.71,66.2
+                     LR,72.00,92.86,68.42,72.8
+                     Kneighbors,76.00,92.86,54.54,79.5`;
                      console.log(csvData)
 
     //   Papa.parse(csvData, {
