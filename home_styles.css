@@ -35,7 +35,7 @@ header p {
 }
 
 .dataset-selection {
-    background: linear-gradient(135deg, #6f86d6 0%, #48c6ef 100%);
+    background: linear-gradient(135deg, #6f86d6 0%, #FF5733 100%);
     border-radius: 10px;
     padding: 20px;
     margin-top: 20px;
@@ -78,7 +78,7 @@ header p {
 }
 
 button {
-    background-color: #54d1e1;
+    background-color: #FF5733;
     color: rgb(4, 3, 3);
     padding: 12px 20px;
     border: none;
@@ -89,7 +89,7 @@ button {
 }
 
 button:hover {
-    background-color: #13c0e3;
+    background-color: #FF5733;
 }
 
 footer {
@@ -97,14 +97,14 @@ footer {
 }
 
 footer a {
-    color: #007bff;
+    color: #FF5733;
     text-decoration: none;
     margin-right: 15px;
     transition: color 0.3s ease;
 }
 
 footer a:hover {
-    color: #0056b3;
+    color: #FF5733;
 }
 
 .instructions {
