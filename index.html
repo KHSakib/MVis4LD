@@ -3,157 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SpamVis</title>
+    <title>MVis4LD</title>
     <link rel="stylesheet" href="home_styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: #f5f5f5;
-            color: #333;
-        }
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 20px;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-        header {
-            text-align: center;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #ddd;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-            color: #FF5733 ;
-        }
-        header p {
-            margin: 0;
-            font-size: 1.2em;
-            color: #555;
-        }
-        main {
-            padding: 20px;
-        }
-        .dataset-selection {
-            text-align: center;
-        }
-        .dataset-selection h2 {
-            font-size: 1.8em;
-            margin-bottom: 20px;
-        }
-        .datasets {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .dataset {
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 15px;
-            margin: 10px;
-            text-align: left;
-            width: 300px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-        }
-        .dataset span {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-        }
-        .dataset .dataset-name {
-            font-size: 1.2em;
-            color: #FF5733 ;
-        }
-        .dataset button {
-            background-color: #FF5733 ;
-            color: #fff;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .dataset button a {
-            color: #fff;
-            text-decoration: none;
-        }
-        .dataset button:hover {
-            background-color: #FF5733 ;
-        }
-        .instructions {
-            margin-top: 20px;
-            color: #555;
-        }
-        footer {
-            text-align: center;
-            margin-top: 20px;
-            padding-top: 20px;
-            border-top: 1px solid #ddd;
-        }
-        .footer-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-        .footer-buttons .button {
-            background-color: #FF5733 ;
-            color: #fff;
-            padding: 10px 15px;
-            border-radius: 4px;
-            text-decoration: none;
-            transition: background-color 0.3s;
-        }
-        .footer-buttons .button:hover {
-            background-color: #FF5733 ;
-        }
-    </style>
+
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>SpamVis</h1>
-            <p>SpamVis: Multimodal Visual Interactive System for Enhancing Spam Review Detection</p>
+            <h1>MVis4LD</h1>
+            <p>MVIS4LD: Multimodal Visual Interactive System for Lie Detection</p>
         </header>
         <main>
             <section class="dataset-selection">
                 <h2>Select a Dataset</h2>
                 <div class="datasets">
                     <div class="dataset">
-                        <span class="dataset-name">Restaurant Dataset</span>
-                        <span class="goal">Spam Detection</span>
-                        <span class="size">500 Individual Interviews</span>
-                        <button><a href="index-2.html">Select</a></button>
-                    </div>
+                        <span class="dataset-name">Deception Dataset</span>
+                        <span class="goal">Lie Detection</span>
+                        <span class="size">122 Indivisual Interview</span>
+                        <button><a href="index-2.html">Select</a></button> 
 
-                    <div class="datasets">
-                        <div class="dataset">
-                            <span class="dataset-name">Hotel Dataset</span>
-                            <span class="goal">Spam Detection</span>
-                            <span class="size">400 Individual Interviews</span>
-                            <button><a href="index-2.html">Select</a></button>
-                        </div>
+                        <!-- <input type="file" id="csvFileInput" accept=".csv" onchange="handleFiles()">  -->
+                        <!-- <button id="nextPageButton">Next</button>
+
+                        <script>
+                            document.getElementById('nextPageButton').addEventListener('click', function() {
+                                var fileInput = document.getElementById('csvFileInput');
+                                var file = fileInput.files[0];
+                                var reader = new FileReader();
+                                reader.onload = function(e) {
+                                    // Store the file content in localStorage
+                                    localStorage.setItem('uploadedDataset', e.target.result);
+                                    // Navigate to the next page
+                                    window.location.href = 'index-2.html';
+                                };
+                                if (file) {
+                                    reader.readAsText(file);
+                                } else {
+                                    // Handle case where no file was selected
+                                    alert('Please upload a file before proceeding.');
+                                }
+                            });
+                        </script> -->
+                         
+
+                        <!-- <button>Select</button> -->
+                    </div>
+                    <!-- <div class="dataset">
+                        <span class="dataset-name">COMPAS</span>
+                        <span class="goal">Predict recidivism</span>
+                        <span class="size">6,173</span>
+                        <button>Select</button>
+                    </div> -->
                 </div>
+                <p class="instructions">Instructions for adding a custom dataset</p>
             </section>
+            <footer>
+                <div class="footer-buttons">
+                    <a href="#" class="button">Full Paper</a>
+                    <a href="about.html" class="button">Authors Info</a>
+                    <!-- <a href="#" class="button">Code</a> -->
+                    <a href="#" class="button">Cite</a>
+                </div>
+            </footer>
         </main>
-        <footer>
-            <div class="footer-buttons">
-                <a href="#" class="button">Full Paper</a>
-                <a href="about.html" class="button">Authors Info</a>
-                <a href="#" class="button">Cite</a>
-            </div>
-        </footer>
     </div>
 </body>
 </html>
